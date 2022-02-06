@@ -1,0 +1,47 @@
+REST API Requirements
+- Create 
+- Get list 
+- Get by ID 
+- Update by ID 
+- Delete by ID
+============================
+User 
+- id 
+- username 
+- password 
+- created_at 
+- updated_at
+----------------------------
+/api/login (POST)
+============================
+Department 
+- id 
+- name 
+- description 
+- created_at 
+- updated_at
+- employees[]
+----------------------------
+/api/department (GET) - !
+/api/department/:id (GET) - !
+/api/department/:id (DELETE)
+/api/department (POST)
+/api/department/:id (PATCH)
+============================ 
+Employee 
+- id 
+- username 
+- email 
+- first name 
+- last name 
+- created_at 
+- updated_at 
+----------------------------
+/api/employee (GET)
+/api/employee/:id (GET)
+/api/employee/:id (DELETE)
+/api/employee (POST)
+/api/employee/:id (PATCH)
+============================
+
+
