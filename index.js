@@ -1,13 +1,16 @@
 const express = require('express');
 const app = express();
+const cors = require('cors')
 const port = process.env.PORT || 3000;
 const departments = require('./departments');
 const token = '0123456789';
 app.listen(port, () => console.log(`Server has been started on ${port}`));
 
+app.use(cors());
+
 const authenticateToken = (request, response, next) => {
     if (!!request.headers.authorization) {
-        const clientToken = request.headers.authorization.split(' ')[1];
+        const clientToken = request.headers.authorization;
         if (clientToken !== token) {
             return response.status(401).json('The token is incorrect');
         } else {
